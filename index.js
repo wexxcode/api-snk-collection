@@ -1,9 +1,11 @@
 // index.js
+const cors = require('cors')
 const express = require("express");
 const mongoose = require("mongoose");
 const productRouter = require("./src/routes/productRouter");
 
 const app = express();
+app.use(cors());
 
 app.use(express.json()); //Used to parse JSON bodies
 app.use(express.urlencoded()); //Parse URL-encoded bodies
